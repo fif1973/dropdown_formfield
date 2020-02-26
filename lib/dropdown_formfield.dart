@@ -13,11 +13,13 @@ class DropDownFormField extends FormField<dynamic> {
   final String valueField;
   final Function onChanged;
   final bool filled;
+  final InputDecoration inputDecoration;
 
   DropDownFormField(
       {FormFieldSetter<dynamic> onSaved,
       FormFieldValidator<dynamic> validator,
       bool autovalidate = false,
+      this.inputDecoration
       this.titleText = 'Title',
       this.hintText = 'Select one option',
       this.required = false,
@@ -39,7 +41,7 @@ class DropDownFormField extends FormField<dynamic> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   InputDecorator(
-                    decoration: InputDecoration(
+                    decoration: inputDecoration ?? InputDecoration(
                       contentPadding: EdgeInsets.fromLTRB(12, 12, 8, 0),
                       labelText: titleText,
                       filled: filled,
