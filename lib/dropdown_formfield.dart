@@ -19,7 +19,7 @@ class DropDownFormField extends FormField<dynamic> {
       {FormFieldSetter<dynamic> onSaved,
       FormFieldValidator<dynamic> validator,
       bool autovalidate = false,
-      this.inputDecoration
+      this.inputDecoration,
       this.titleText = 'Title',
       this.hintText = 'Select one option',
       this.required = false,
